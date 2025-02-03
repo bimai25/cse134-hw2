@@ -9,6 +9,16 @@
             border-bottom: 2px solid black;
         }
     </style>
+    <script>
+        class HelloWorldElement extends HTMLElement {
+        constructor() {
+            super();
+            console.log("Hello World!");
+            }
+        }
+
+        customElements.define('hello-world', HelloWorldElement);
+    </script>
     <link rel = "icon" href = "/assets/favicon.ico"/>
     <template id = "nav-bar">
         <nav>
@@ -20,6 +30,7 @@
         </nav>
     </template>
     <body>
+        <hello-world></hello-world>
         <nav>
             <a href = "index.html">Home</a>
             <a href = "about.html">About</a>

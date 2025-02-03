@@ -11,6 +11,36 @@
         th, td{
             border: 1px solid grey;
         }
+
+        bowling-card {
+            display: grid;
+            grid-template-columns: auto;
+            justify-items: center;
+            text-align: center;
+            background: #f0f0f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            width: 300px;
+            font-family: "Verdana", sans-serif;
+        }
+
+        bowling-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        bowling-card h3 {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        bowling-card p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
     </style>
     <body>
         <nav>
@@ -111,9 +141,24 @@
             <span id = "bowling">
                 <h2>Bowling</h2>
                 <figure>
-                    <img src = "assets/clone.png" alt = "Rotogrip Clone Bowling Ball"/>
-                    <img src = "assets/idol_cosmos.png" alt = "Rotogrip Idol Cosmos Bowling Ball"/>
-                    <img src = "assets/phaze_v.jpg" alt = "Storm Phaze V Bowling Ball"/>
+                    <bowling-card>
+                        <img src = "assets/clone.png" alt = "Rotogrip Clone Bowling Ball"/>
+                        <h3>Rotogrip Clone</h3>
+                        <p>Typically the first ball out of my bag</p>
+                    </bowling-card>
+                    <br>
+                    <bowling-card>
+                        <img src = "assets/idol_cosmos.png" alt = "Rotogrip Idol Cosmos Bowling Ball"/>
+                        <h3>Rotogrip Idol Cosmos</h3>
+                        <p>First ball I ever bought</p>
+                    </bowling-card>
+                    <br>
+                    <bowling-card>
+                        <img src = "assets/phaze_v.jpg" alt = "Storm Phaze V Bowling Ball"/>
+                        <h3>Storm Phaze V</h3>
+                        <p>Bought this ball in Las Vegas</p>
+                    </bowling-card>
+
                 </figure>
                 <video controls width = "250">
                     <source src = "assets/bowl.webm" type = "video/webm"/>
