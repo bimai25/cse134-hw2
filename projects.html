@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Brandon Imai's Projects</title>
+    </head>
+    <header>This page contains information about Brandon's projects and community involvements</header>
+    <body>
+        <nav>
+            <a href = "index.html">Home</a>
+            <a href = "about.html">About</a>
+            <a href = "projects.html">Projects</a>
+            <a href = "sports.html">Sports</a>
+            <a href = "experiments.html">Experiments</a>
+        </nav>
+    </body>
+    <main>
+        <div id = "coding-projects">
+            <hgroup>
+                <h2>Coding Projects</h2>
+                <h3>Ray Tracer CSE 167/168</h3>
+            </hgroup>
+            <p>Here is the main engine of the ray tracer that I coded in CSE 167 and 168</p>
+            <pre><code>
+    int main(int argc, char* argv[]){
+        //read file
+        readfile(argv[1], width, height, eye, center, up, all_spheres, maxVerts,
+        all_triangles, fovy, all_lights, attenuation);
+        //do ray tracer routine
+        vec3 pix[height][width];
+        for(int i = 0; i < height; ++i){
+            for(int j = 0; j < width; j++){
+            long totalPixels = height*width;
+            //status updates
+            if( (currPixel) % 2500 == 0){
+                cout << currPixel << " pixels rendered  " << totalPixels-currPixel << " pixels to go!" << endl;
+            }
+
+            vec4 origin = vec4(eye, 1.0f);
+            vec4 direction = calcCamRay(eye, center, up, fovy, width, height, (float)i + 0.5, (float)j + 0.5);
+
+            //for the camera ray, need to figure out which object it intersects first
+            float min_t_sphere = INFINITY;
+            float min_t_triangle = INFINITY;
+            sphere min_sphere;
+            triangle min_triangle;
+            std::tuple<vec3, vec3, float> min_sphere_intersection; //real point, normal, t
+            vec3 min_intersection_triangle;
+
+            //check intersection of all spheres, find closest
+            for(auto it = all_spheres.begin(); it != all_spheres.end(); ++it){
+                tuple<vec3, vec3, float> currIntersect;
+                float curr = intersectSphere(origin, direction, it->props, it->transforms, currIntersect); //computes intersect between R' and G
+
+                //get the closest sphere
+                if(curr <= min_t_sphere && curr > 0){
+                min_sphere = *it;
+                min_sphere_intersection = currIntersect;
+                min_t_sphere = get<2>(min_sphere_intersection);
+                }
+            }
+            //check intersection for all triangles, find closest
+            for(auto it = all_triangles.begin(); it != all_triangles.end(); ++it){
+                float curr = intersectTriangle(origin, direction, it->vertices);
+                //get the closest triangle
+                if(curr <= min_t_triangle && curr > 0){
+                min_t_triangle = curr;
+                min_triangle = *it;
+                vec4 homIntersect = origin + min_t_triangle*direction;
+                min_intersection_triangle = vec3(homIntersect[0]/homIntersect[3], homIntersect[1]/homIntersect[3],
+                                            homIntersect[2]/homIntersect[3]);
+                }
+            }
+            //take the closest primitive
+            if(min_t_triangle < min_t_sphere){
+                if(min_t_triangle > 0 && min_t_triangle < INFINITY){
+                vec3 normal = normTriangle(min_triangle.vertices);
+                pix[i][j] = color(min_triangle.ambient, min_triangle.emission, min_triangle.specular, min_triangle.diffuse,
+                min_triangle.shininess, normal, min_intersection_triangle, attenuation, all_lights, eye, all_spheres, all_triangles)*255.0f;
+                //*/
+                //pix[i][j] = vec3(255.0f, 0.0f, 0.0f);
+                }
+            }
+            else{
+                if(min_t_sphere > 0 && min_t_sphere < INFINITY){
+                pix[i][j]= color(min_sphere.ambient, min_sphere.emission, min_sphere.specular, min_sphere.diffuse,
+                min_sphere.shininess, get<1>(min_sphere_intersection), get<0>(min_sphere_intersection), attenuation, all_lights, eye,
+                all_spheres, all_triangles)*255.0f;
+
+                //*/
+                //pix[i][j] = vec3(255.0f, 0.0f, 0.0f);
+
+                }
+            }
+            currPixel++;
+            }
+        }
+            </code></pre>
+            <figure>
+                <img src = "assets/render_1.jpg" alt = "Render 1 from Ray Tracer"/>
+                <img src = "assets/render_2.jpg" alt = "Render 2 from Ray Tracer"/>
+                <figcaption>Images rendered with the above Ray Tracer code</figcaption>
+            </figure>
+        </div>
+        <hr>
+        <div id = "hkn">
+            <h2>Eta Kappa Nu (HKN) - Kappa Psi Chapter</h2>
+            <h3>Vice President - External Affairs | <em>May 2023 - Jun 2024</em></h3>
+                <ul>
+                   <li>Revamped the VP External role, leading all major event planning, professional development, and HKN company outreach.</li>
+                   <li>Managed two teams (9 members total), the Special Events and Professional Chairs teams, to execute all major-event goals.</li>
+                   <li>-Returned the Honors Career Fair to an in-person format, increasing attendance to 80+ students and 6 companies.</li>
+                   <li>Achieved record participation at both the Honors Networking Event (85+ attendees) and HARD Hack (125+ competitors).</li>
+                   <li>Procured over $4,000 in corporate sponsorships for HKN, enhancing the org's overall event quantity, quality, and breadth.</li>
+                   <li>Interfaced with 20+ companies including Qualcomm, Apple, Leidos, Northrop Grumman, and Lawrence Livermore.</li>
+                   <li>Represented the UCSD HKN chapter at SD <dfn>IEEE</dfn> [Institute of Electrical and Electronics Engineers] meetings, championing greater student engagement with SD IEEE.</li>
+                </ul>
+            <h3>Professional Chair | <em>Jan 2023 - May 2023</em></h3>
+                <ul>
+                    <li> Planned professional-related events, originating 2 new workshops including a professor talk series</li>
+                    <li>Coordinated with the VP of Events to create presentations, reserve rooms, and handle internal logistics</li>
+                    <li>Networked with recruiters, professors, and HKN alumni for presentations and panels</li>
+                </ul>
+        </div>
+    </main>
+</html>
