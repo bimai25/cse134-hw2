@@ -1,92 +1,97 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <title>About Brandon Imai</title>
-    </head>
-    <header>This page contains general and contact information for Brandon Imai</header>
-    <body>
-        <nav>
-            <a href = "index.html">Home</a>
-            <a href = "about.html">About</a>
-            <a href = "projects.html">Projects</a>
-            <a href = "sports.html">Sports</a>
-            <a href = "experiments.html">Experiments</a>
-        </nav>
+<html lang="en">
+  <head>
+    <link href="stylesheets/about.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>About Brandon Imai</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="sports.html">Sports</a>
+      <a href="experiments.html">Experiments</a>
+    </nav>
 
-        <main>
-            <div id = "resume">
-                <h3>Resume</h3>
-                <iframe src = "assets/Brandon_Imai_v3.pdf"></iframe>
-            </div>
+    <main>
+      <section id="resume">
+        <h3>Resume</h3>
+        <iframe src="assets/Brandon_Imai_v3.pdf"></iframe>
+      </section>
 
-            <div id = "about-info">
-                <span id = "coursework">
-                    <h3>Relevant Coursework</h3>
-                        <ol>
-                            <li>CSE 110 - Software Engineering</li>
-                            <li>Systems</li>
-                                <ul>
-                                    <li>CSE 120 - Principles of Computer Operating Systems </li>
-                                </ul>
-                            <li>Theory and Abstraction</li>
-                                <ul>
-                                    <li> CSE 132A - Database System Principles</li>
-                                </ul>
-                            <li>Applications of Computing</li>
-                                <ul>
-                                    <li>CSE 134B - Web Client Languages</li>
-                                    <li>CSE 150B - AI: Search and Reasoning</li>
-                                    <li>CSE 152A - Intro to Computer Vision</li>
-                                </ul>
-                        </ol>
-                </span>
-                <span id = "contact-form">
-                    <h3>Contact Me!</h3>
-                    <form>
-                        <fieldset>
-                            <legend>Personal Information</legend>
-                            <label>First Name:</label>
-                            <input type = "text">
-                            <label>Last Name:</label>
-                            <input type = "text"> <br><br>
-                            <label>Email:</label>
-                            <input type = "text"/>
-                            <label>Phone Number:</label>
-                            <input type = "text"/>
-                            <label>Who are you?</label>
-                            <select>
-                                <optgroup label = "School">
-                                    <option value = "Student">Student</option>
-                                    <option value = "Professor">Professor</option>
-                                </optgroup>
-                                <optgroup label = "Industry">
-                                    <option value = "Recruiter">Recruiter</option>
-                                    <option value = "Engineer">Engineer</option>
-                                </optgroup>
-                                <option value = "Other">Other</option>
-                            </select>
-                         </fieldset>
-                         <fieldset>
-                            <legend>Inquiry</legend>
-                            <textarea></textarea>
-                         </fieldset>
+      <span id="coursework">
+        <h3>Relevant Coursework</h3>
+        <ol>
+          <li>CSE 110 - Software Engineering</li>
+          <li>Systems</li>
+          <ul>
+            <li>CSE 120 - Principles of Computer Operating Systems</li>
+          </ul>
+          <li>Theory and Abstraction</li>
+          <ul>
+            <li>CSE 132A - Database System Principles</li>
+          </ul>
+          <li>Applications of Computing</li>
+          <ul>
+            <li>CSE 134B - Web Client Languages</li>
+            <li>CSE 150B - AI: Search and Reasoning</li>
+            <li>CSE 152A - Intro to Computer Vision</li>
+          </ul>
+        </ol>
+      </span>
 
-                         <details>
-                            <summary>Additional Details</summary>
-                            <label>Preferred Method of Communication:</label>
-                            <input list = "methods"/>
-                            <datalist id = "methods">
-                                <option value = "Email"></option>
-                                <option value = "Phone"></option>
-                            </datalist>
-                         </details>
-                         <button>Submit!</button>
-                    </form>
-                </span>
-            </div>
-        </main> <br>
-        <footer>If the form does not work, Brandon's email is <address>brandonimai25@gmail.com</address> <br> If the iframe is not loading, press <kbd><code>Cmd + R</code></kbd> on Mac
-            or <kbd><code>Ctrl + R</code></kbd> on Windows to reload the page</footer>
-    </body>
+      <span id="contact-form">
+        <h3>Contact Me!</h3>
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label>First Name:</label>
+            <input type="text" />
+            <label>Last Name:</label>
+            <input type="text" /> <br /><br />
+            <label>Email:</label>
+            <input type="text" />
+            <label>Phone Number:</label>
+            <input type="text" />
+            <label>Who are you?</label>
+            <select>
+              <optgroup label="School">
+                <option value="Student">Student</option>
+                <option value="Professor">Professor</option>
+              </optgroup>
+              <optgroup label="Industry">
+                <option value="Recruiter">Recruiter</option>
+                <option value="Engineer">Engineer</option>
+              </optgroup>
+              <option value="Other">Other</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Inquiry</legend>
+            <textarea></textarea>
+          </fieldset>
+
+          <details>
+            <summary>Additional Details</summary>
+            <label>Preferred Method of Communication:</label>
+            <input list="methods" />
+            <datalist id="methods">
+              <option value="Email"></option>
+              <option value="Phone"></option>
+            </datalist>
+          </details>
+          <button>Submit!</button>
+        </form>
+      </span>
+    </main>
+    <br />
+    <footer>
+      If the form does not work, Brandon's email is
+      <address>brandonimai25@gmail.com</address>
+      <br />
+      If the iframe is not loading, press <kbd><code>Cmd + R</code></kbd> on Mac
+      or <kbd><code>Ctrl + R</code></kbd> on Windows to reload the page
+    </footer>
+  </body>
 </html>

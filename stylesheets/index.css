@@ -1,0 +1,151 @@
+@import url("variables.css");
+@import url("navbar.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--site-font);
+}
+
+main,
+footer {
+  padding: 1rem;
+}
+
+.name-and-pic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.name-and-pic .group {
+  width: 75%;
+}
+.name-and-pic .group h1 {
+  border-bottom: 0.5rem;
+}
+.name-and-pic img {
+  width: 15vw;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.name-and-pic h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.name-and-pic blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--tertiary-color, black);
+  margin-top: 0;
+}
+
+.name-and-pic cite {
+  font-weight: bold;
+}
+
+.name-and-pic p {
+  font-size: 1rem;
+  background-color: var(--alt-bg-color, gray);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  width: 50%;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.info-display {
+  background-color: var(--alt-bg-color, gray);
+  padding: 2rem;
+  margin: 2rem 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.info-display h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--tertiary-color, black);
+  margin-bottom: 1rem;
+}
+
+.info-display ul {
+  list-style-type: none;
+}
+
+.info-display li {
+  font-size: 1.2rem;
+  color: var(--tertiary-color, black);
+  margin-bottom: 0.5rem;
+}
+
+.info-display li em {
+  font-weight: bold;
+  color: var(--secondary-color, black);
+}
+
+.info-display li strong {
+  font-weight: bold;
+  color: var(--tertiary-color, black);
+}
+
+.info-display li ul {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.info-display a {
+  color: var(--primary-color, blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.info-display a:hover {
+  color: var(--alt-primary-color, balck);
+}
+
+.info-display aside {
+  background-color: var(--alt-primary-color, "lightblue");
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  width: 50%;
+  font-style: italic;
+  color: var(--tertiary-color, black);
+}
+
+.info-display aside p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .info-display {
+    padding: 1.5rem;
+  }
+
+  .info-display h2 {
+    font-size: 2rem;
+  }
+
+  .info-display li {
+    font-size: 1rem;
+  }
+
+  .info-display a {
+    font-size: 1rem;
+  }
+
+  .info-display aside {
+    font-size: 1rem;
+  }
+}

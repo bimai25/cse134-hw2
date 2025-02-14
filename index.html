@@ -1,78 +1,98 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Brandon Imai's Portfolio</title>
-        <style>
-            h1 {
-                border-bottom: 2px solid black;
-            }
-        </style>
-        <script>
-            class HelloWorldElement extends HTMLElement {
-            constructor() {
-                super();
-                console.log("Hello World!");
-                }
-            }
+<html lang="en">
+  <head>
+    <link href="stylesheets/index.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>Brandon Imai's Portfolio</title>
 
-            customElements.define('hello-world', HelloWorldElement);
-        </script>
-        <link rel = "icon" href = "/assets/favicon.ico">
-        <template id = "nav-bar">
-            <nav>
-                <a href = "index.html">Home</a>
-                <a href = "about.html">About</a>
-                <a href = "projects.html">Projects</a>
-                <a href = "sports.html">Sports</a>
-                <a href = "experiments.html">Experiments</a>
-            </nav>
-        </template>
-    </head>
-    <body>
-        <hello-world></hello-world>
-        <nav>
-            <a href = "index.html">Home</a>
-            <a href = "about.html">About</a>
-            <a href = "projects.html">Projects</a>
-            <a href = "sports.html">Sports</a>
-            <a href = "experiments.html">Experiments</a>
-        </nav>
-        <main>
-            <div class = "main-body">
-                <img src = "assets/headshot.jpeg" alt = "headshot">
-                <h1>Brandon Imai</h1> <blockquote>"It always seems impossible until it's done" - <cite>Nelson Mandela</cite></blockquote>
-                <p>Hi! My name is Brandon Imai and I am a <i>fourth-year</i> <b> Computer Science</b> major at UC San Diego.
-                    I am passionate about how our decisions as Software Engineers affect the world and our users. In my free time,
-                    I enjoy watching sports, bowling, umpiring, and eating great food with my friends.
-                </p>
-                <section class = "info-display">
-                    <h2>General Info</h2>
-                    <ul>
-                        <li><em>School:</em> UC San Diego</li>
-                        <li><em>Degree:</em> Bachelor of Science - Computer Science</li>
-                        <li><em>Past Experiences: </em>
-                            <ul>
-                                <li><strong>Software Engineering Intern</strong> - Northrop Grumman Corporation</li>
-                                <li><strong>VP External</strong> - <abbr title = "Eta Kappa Nu">HKN</abbr> Kappa Psi Chapter</li>
-                                <li><strong>President</strong> - UC San Diego Club Baseball Team</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <aside>
-                        <p>Brandon currently has a full-time job offer post-grad, but is open to discussing about any other open opportunities!</p>
-                    </aside>
-                </section>
+    <script>
+      class HelloWorldElement extends HTMLElement {
+        constructor() {
+          super();
+          console.log("Hello World!");
+        }
+      }
 
-                <section class = "info-display">
-                    <h2>Contacts/Links</h2>
-                    <ul>
-                        <li><a href="www.linkedin.com/in/brandon-imai">LinkedIn</a></li>
-                    </ul>
-                </section>
+      customElements.define("hello-world", HelloWorldElement);
+    </script>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <template id="nav-bar">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="sports.html">Sports</a>
+        <a href="experiments.html">Experiments</a>
+      </nav>
+    </template>
+  </head>
+  <body>
+    <hello-world></hello-world>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="sports.html">Sports</a>
+      <a href="experiments.html">Experiments</a>
+    </nav>
+    <main>
+      <section class="name-and-pic">
+        <section class="group">
+          <h1>Brandon Imai</h1>
+          <blockquote>
+            "It always seems impossible until it's done" -
+            <cite>Nelson Mandela</cite>
+          </blockquote>
+          <p>
+            Hi! My name is Brandon Imai and I am a <i>fourth-year</i>
+            <b> Computer Science</b> major at UC San Diego. I am passionate about
+            how our decisions as Software Engineers affect the world and our users.
+            In my free time, I enjoy watching sports, bowling, umpiring, and eating
+            great food with my friends.
+          </p>
+        </section>
+        <img src="assets/headshot.jpeg" alt="headshot" />
+      </section>
+      <section class="info-display">
+        <h2>General Info</h2>
+        <ul>
+          <li><em>School:</em> UC San Diego</li>
+          <li><em>Degree:</em> Bachelor of Science - Computer Science</li>
+          <li>
+            <em>Past Experiences: </em>
+            <ul>
+              <li>
+                <strong>Software Engineering Intern</strong> - Northrop Grumman
+                Corporation
+              </li>
+              <li>
+                <strong>VP External</strong> -
+                <abbr title="Eta Kappa Nu">HKN</abbr> Kappa Psi Chapter
+              </li>
+              <li>
+                <strong>President</strong> - UC San Diego Club Baseball Team
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <aside>
+          <p>
+            Brandon currently has a full-time job offer post-grad, but is open
+            to discussing about any other open opportunities!
+          </p>
+        </aside>
+      </section>
 
-                </div>
-        </main>
-        <footer>This site was created by Brandon Imai for WI25 CSE 134B at UC San Diego. This site is a work in progress.</footer>
-    </body>
+      <section class="info-display">
+        <h2>Contacts/Links</h2>
+        <ul>
+          <li><a href="www.linkedin.com/in/brandon-imai">LinkedIn</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      This site was created by Brandon Imai for WI25 CSE 134B at UC San Diego.
+      This site is a work in progress.
+    </footer>
+  </body>
 </html>
