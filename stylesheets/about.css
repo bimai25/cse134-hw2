@@ -122,22 +122,19 @@ summary:hover {
 }
 
 @media (max-width: 768px) {
-  #contact-form {
-    padding: 1rem;
-  }
-
-  button {
-    padding: 0.75rem; /* Smaller button padding for mobile */
-  }
-}
-
-@media (max-width: 768px) {
-  main{
+  main {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   #resume iframe {
     height: 60dvh;
+  }
+  #contact-form {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.75rem;
   }
 }
