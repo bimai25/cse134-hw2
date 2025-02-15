@@ -2,9 +2,9 @@
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
+        <link href="stylesheets/projects.css" rel="stylesheet" />
         <title>Brandon Imai's Projects</title>
     </head>
-    <header>This page contains information about Brandon's projects and community involvements</header>
     <body>
         <nav>
             <a href = "index.html">Home</a>
@@ -15,11 +15,10 @@
         </nav>
     </body>
     <main>
-        <div id = "coding-projects">
-            <hgroup>
-                <h2>Coding Projects</h2>
+        <section class = "coding-projects">
+            <h2>Coding Projects</h2>
+            <section class = "cse167-168">
                 <h3>Ray Tracer CSE 167/168</h3>
-            </hgroup>
             <p>Here is the main engine of the ray tracer that I coded in CSE 167 and 168</p>
             <pre><code>
     int main(int argc, char* argv[]){
@@ -97,19 +96,22 @@
         }
             </code></pre>
             <figure>
-                <img src = "assets/render_1.jpg" alt = "Render 1 from Ray Tracer"/>
-                <img src = "assets/render_2.jpg" alt = "Render 2 from Ray Tracer"/>
+                <section style="display: flex; flex-direction: row; gap: 1rem; justify-content: center;">
+                    <img src = "assets/render_1.jpg" alt = "Render 1 from Ray Tracer"/>
+                    <img src = "assets/render_2.jpg" alt = "Render 2 from Ray Tracer"/>
+                </section>
                 <figcaption>Images rendered with the above Ray Tracer code</figcaption>
             </figure>
-        </div>
-        <hr>
-        <div id = "hkn">
+            </section>
+
+        </section>
+        <section class = "hkn">
             <h2>Eta Kappa Nu (HKN) - Kappa Psi Chapter</h2>
             <h3>Vice President - External Affairs | <em>May 2023 - Jun 2024</em></h3>
                 <ul>
                    <li>Revamped the VP External role, leading all major event planning, professional development, and HKN company outreach.</li>
                    <li>Managed two teams (9 members total), the Special Events and Professional Chairs teams, to execute all major-event goals.</li>
-                   <li>-Returned the Honors Career Fair to an in-person format, increasing attendance to 80+ students and 6 companies.</li>
+                   <li>Returned the Honors Career Fair to an in-person format, increasing attendance to 80+ students and 6 companies.</li>
                    <li>Achieved record participation at both the Honors Networking Event (85+ attendees) and HARD Hack (125+ competitors).</li>
                    <li>Procured over $4,000 in corporate sponsorships for HKN, enhancing the org's overall event quantity, quality, and breadth.</li>
                    <li>Interfaced with 20+ companies including Qualcomm, Apple, Leidos, Northrop Grumman, and Lawrence Livermore.</li>
@@ -121,6 +123,6 @@
                     <li>Coordinated with the VP of Events to create presentations, reserve rooms, and handle internal logistics</li>
                     <li>Networked with recruiters, professors, and HKN alumni for presentations and panels</li>
                 </ul>
-        </div>
+            </section>
     </main>
 </html>

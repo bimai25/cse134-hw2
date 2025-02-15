@@ -1,170 +1,140 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Brandon Imai's Sports</title>
-        <style>
-            table {
-                border: 2px solid black;
-            }
-            th, td{
-                border: 1px solid grey;
-            }
+<html lang="en">
+  <head>
+    <link href="stylesheets/sports.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>Brandon Imai's Sports</title>
+  </head>
 
-            bowling-card {
-                display: grid;
-                grid-template-columns: auto;
-                justify-items: center;
-                text-align: center;
-                background: #f0f0f0;
-                border-radius: 12px;
-                padding: 1.5rem;
-                width: 300px;
-                font-family: "Verdana", sans-serif;
-            }
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="sports.html">Sports</a>
+      <a href="experiments.html">Experiments</a>
+    </nav>
+    <main>
+      <section class="baseball-stats">
+        <div class="baseball-table">
+          <h2>Baseball Stats</h2>
+          <table>
+            <colgroup>
+              <col />
+              <col class="GP" />
+              <col class="AB" />
+              <col class="H" />
+              <col class="RBI" />
+              <col class="R" />
+              <col class="SB" />
+            </colgroup>
+            <tr>
+              <td></td>
+              <th>GP</th>
+              <th>AB</th>
+              <th>H</th>
+              <th>RBI</th>
+              <th>R</th>
+              <th>SB</th>
+            </tr>
+            <tr>
+              <th>Fall 2021</th>
+              <td>12</td>
+              <td>30</td>
+              <td>10</td>
+              <td>4</td>
+              <td>9</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th>Spring 2022</th>
+              <td>15</td>
+              <td>34</td>
+              <td>9</td>
+              <td>5</td>
+              <td>4</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th>Fall 2022</th>
+              <td>4</td>
+              <td>11</td>
+              <td>4</td>
+              <td>2</td>
+              <td>1</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th>Spring 2023</th>
+              <td>17</td>
+              <td>37</td>
+              <td>10</td>
+              <td>11</td>
+              <td>6</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th>Fall 2023 - 2024</th>
+              <td>6</td>
+              <td>11</td>
+              <td>5</td>
+              <td>4</td>
+              <td>7</td>
+              <td>1</td>
+            </tr>
+            <caption>
+              Club Baseball Stats by Year
+            </caption>
+          </table>
+        </div>
+        <div class="baseball-def">
+          <h3>Definitions</h3>
+          <dl>
+            <dt>GP</dt>
+            <dd>Games Played</dd>
+            <dt>AB</dt>
+            <dd>At Bats</dd>
+            <dt>H</dt>
+            <dd>Hits</dd>
+            <dt>RBI</dt>
+            <dd>Runs Batted In</dd>
+            <dt>R</dt>
+            <dd>Runs Scored</dd>
+            <dt>SB</dt>
+            <dd>Stolen Bases</dd>
+          </dl>
+        </div>
+      </section>
 
-            bowling-card img {
-                border-radius: 50%;
-                width: 100px;
-                height: 100px;
-            }
-
-            bowling-card h3 {
-                margin: 0.5rem 0 0;
-                font-size: 1.2rem;
-                color: #333;
-            }
-
-            bowling-card p {
-                color: #777;
-                font-size: 0.9rem;
-            }
-
-        </style>
-    </head>
-
-    <body>
-        <nav>
-            <a href = "index.html">Home</a>
-            <a href = "about.html">About</a>
-            <a href = "projects.html">Projects</a>
-            <a href = "sports.html">Sports</a>
-            <a href = "experiments.html">Experiments</a>
-        </nav>
-        <main>
-            <span id = "baseball-stats">
-                <h2>Baseball Stats</h2>
-                <table>
-                    <colgroup>
-                        <col/>
-                        <col class = "GP"/>
-                        <col class = "AB"/>
-                        <col class = "H"/>
-                        <col class = "RBI"/>
-                        <col class = "R"/>
-                        <col class = "SB"/>
-                    </colgroup>
-                    <tr>
-                        <td></td>
-                        <th>GP</th>
-                        <th>AB</th>
-                        <th>H</th>
-                        <th>RBI</th>
-                        <th>R</th>
-                        <th>SB</th>
-                    </tr>
-                    <tr>
-                        <th>Fall 2021</th>
-                        <td>12</td>
-                        <td>30</td>
-                        <td>10</td>
-                        <td>4</td>
-                        <td>9</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <th>Spring 2022</th>
-                        <td>15</td>
-                        <td>34</td>
-                        <td>9</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <th>Fall 2022</th>
-                        <td>4</td>
-                        <td>11</td>
-                        <td>4</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <th>Spring 2023</th>
-                        <td>17</td>
-                        <td>37</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>6</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <th>Fall 2023 - 2024</th>
-                        <td>6</td>
-                        <td>11</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>7</td>
-                        <td>1</td>
-                    </tr>
-                    <caption>
-                        Club Baseball Stats by Year
-                    </caption>
-                </table>
-                <h3>Definitions</h3>
-                <dl>
-                    <dt>GP</dt>
-                    <dd>Games Played</dd>
-                    <dt>AB</dt>
-                    <dd>At Bats</dd>
-                    <dt>H</dt>
-                    <dd>Hits</dd>
-                    <dt>RBI</dt>
-                    <dd>Runs Batted In</dd>
-                    <dt>R</dt>
-                    <dd>Runs Scored</dd>
-                    <dt>SB</dt>
-                    <dd>Stolen Bases</dd>
-                </dl>
-            </span>
-
-            <span id = "bowling">
-                <h2>Bowling</h2>
-                <figure>
-                    <bowling-card>
-                        <img src = "assets/clone.png" alt = "Rotogrip Clone Bowling Ball"/>
-                        <h3>Rotogrip Clone</h3>
-                        <p>Typically the first ball out of my bag</p>
-                    </bowling-card>
-                    <br>
-                    <bowling-card>
-                        <img src = "assets/idol_cosmos.png" alt = "Rotogrip Idol Cosmos Bowling Ball"/>
-                        <h3>Rotogrip Idol Cosmos</h3>
-                        <p>First ball I ever bought</p>
-                    </bowling-card>
-                    <br>
-                    <bowling-card>
-                        <img src = "assets/phaze_v.jpg" alt = "Storm Phaze V Bowling Ball"/>
-                        <h3>Storm Phaze V</h3>
-                        <p>Bought this ball in Las Vegas</p>
-                    </bowling-card>
-
-                </figure>
-                <video controls width = "250">
-                    <source src = "assets/bowl.webm" type = "video/webm"/>
-                </video>
-            </span>
-        </main>
-    </body>
+      <section class="bowling">
+        <h2>Bowling</h2>
+        <figure>
+          <bowling-card>
+            <img src="assets/clone.png" alt="Rotogrip Clone Bowling Ball" />
+            <h3>Rotogrip Clone</h3>
+            <p>Typically the first ball out of my bag</p>
+          </bowling-card>
+          <br />
+          <bowling-card>
+            <img
+              src="assets/idol_cosmos.png"
+              alt="Rotogrip Idol Cosmos Bowling Ball"
+            />
+            <h3>Rotogrip Idol Cosmos</h3>
+            <p>First ball I ever bought</p>
+          </bowling-card>
+          <br />
+          <bowling-card>
+            <img src="assets/phaze_v.jpg" alt="Storm Phaze V Bowling Ball" />
+            <h3>Storm Phaze V</h3>
+            <p>Bought this ball in Las Vegas</p>
+          </bowling-card>
+        </figure>
+        <video controls width="250">
+          <source src="assets/bowl.webm" type="video/webm" />
+          Your browser does not support the video tag
+        </video>
+      </section>
+    </main>
+  </body>
 </html>

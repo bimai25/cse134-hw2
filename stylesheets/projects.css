@@ -1,0 +1,116 @@
+@import url("variables.css");
+@import url("navbar.css");
+
+:root{
+    --code-bg-color: #1e1e1e;
+    --code-font-color: #f8f8f2
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--site-font);
+}
+
+footer {
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coding-projects,
+.hkn {
+  width: 75dvw;
+  padding: 2rem;
+  background-color: var(--alt-bg-color, white);
+  border-radius: 1rem;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h3 {
+  color: var(--secondary-color, black);
+  margin-bottom: 1rem;
+}
+
+pre {
+  background-color: var(--code-bg-color, black);
+  color: var(--code-font-color, white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-height: 30rem;
+  overflow-x: auto;
+  overflow-y: scroll;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+figure img {
+  width: 100%;
+  max-width: 40%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+#hkn h2 {
+  border-bottom: 0.1em solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+ul li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .coding-projects,
+  #hkn {
+    padding: 1.5rem;
+  }
+
+  figure img {
+    max-width: 100%;
+  }
+}

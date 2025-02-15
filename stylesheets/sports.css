@@ -1,0 +1,190 @@
+@import url("variables.css");
+@import url("navbar.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--site-font);
+}
+
+main{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+  background-color: var(--alt-primary-color, white);
+  width: 75dvw;
+  padding: 2rem;
+  background-color: var(--alt-bg-color, white);
+  border-radius: 1rem;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
+main,
+footer {
+  padding: 1rem;
+}
+
+.baseball-stats {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.baseball-table h2,
+.baseball-def h3{
+  text-align: center;
+  color: var(--tertiary-color, black);
+}
+
+.baseball-def h3,
+.bowling h2 {
+  margin-bottom: 3rem;
+}
+
+.baseball-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.baseball-table th,
+.baseball-table td {
+  padding: 1em;
+  text-align: center;
+  border: 0.1rem solid #ddd;
+  font-size: 1rem;
+}
+
+.baseball-table th {
+  background: var(--primary-color, blue);
+  color: white;
+  font-weight: bold;
+}
+
+.baseball-table tr:nth-child(even) {
+  background: var(--alt-bg-color, white);
+}
+
+.baseball-table caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: var(--primary-color, blue);
+}
+
+.baseball-def dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.baseball-def dt {
+  font-weight: bold;
+  color: var(--primary-color, blue);
+}
+
+.baseball-def dd {
+  color: var(--tertiary-color, black)
+}
+
+th,
+td {
+  border: 1px solid grey;
+}
+
+bowling-card {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  width: 300px;
+  font-family: "Verdana", sans-serif;
+}
+
+bowling-card img {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+
+bowling-card h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+bowling-card p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  justify-content: space-around;
+}
+
+figure bowling-card:hover {
+  transform: scale(1.1);
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+  .baseball-stats {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    width: 90dvw;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem;
+  }
+
+  .baseball-table th,
+  .baseball-table td {
+    font-size: 0.9rem;
+    padding: 0.5em;
+  }
+
+  .baseball-table caption {
+    font-size: 1rem;
+  }
+
+  .baseball-def dl {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  figure {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  figure bowling-card {
+    width: 100%;
+  }
+}
