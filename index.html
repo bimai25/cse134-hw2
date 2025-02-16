@@ -3,6 +3,7 @@
   <head>
     <link href="stylesheets/index.css" rel="stylesheet" />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Brandon Imai's Portfolio</title>
 
     <script>
@@ -16,15 +17,6 @@
       customElements.define("hello-world", HelloWorldElement);
     </script>
     <link rel="icon" href="/assets/favicon.ico" />
-    <template id="nav-bar">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="sports.html">Sports</a>
-        <a href="experiments.html">Experiments</a>
-      </nav>
-    </template>
   </head>
   <body>
     <hello-world></hello-world>
@@ -33,7 +25,6 @@
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="sports.html">Sports</a>
-      <a href="experiments.html">Experiments</a>
     </nav>
     <main>
       <section class="name-and-pic">
@@ -45,13 +36,17 @@
           </blockquote>
           <p>
             Hi! My name is Brandon Imai and I am a <i>fourth-year</i>
-            <b> Computer Science</b> major at UC San Diego. I am passionate about
-            how our decisions as Software Engineers affect the world and our users.
-            In my free time, I enjoy watching sports, bowling, umpiring, and eating
-            great food with my friends.
+            <b> Computer Science</b> major at UC San Diego. I am passionate
+            about how our decisions as Software Engineers affect the world and
+            our users. In my free time, I enjoy watching sports, bowling,
+            umpiring, and eating great food with my friends.
           </p>
         </section>
-        <img src="assets/headshot.jpeg" alt="headshot" />
+        <picture>
+          <source srcset="assets/headshot-large.webp" type="image/webp">
+          <source srcset="assets/headshot-large.jpg" type="image/jpeg">
+          <img src="assets/headshot-medium.jpg" alt="Brandon Imai's professional headshot" class="profile-img">
+        </picture>
       </section>
       <section class="info-display">
         <h2>General Info</h2>
