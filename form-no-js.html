@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="stylesheets/about.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>About Brandon Imai</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="sports.html">Sports</a>
+    </nav>
+
+    <main>
+      <section id="resume">
+        <h3>Resume</h3>
+        <iframe src="assets/Brandon_Imai_v3.pdf"></iframe>
+      </section>
+
+      <span id="coursework">
+        <h3>Relevant Coursework</h3>
+        <ol>
+          <li>CSE 110 - Software Engineering</li>
+          <li>Systems</li>
+          <ul>
+            <li>CSE 120 - Principles of Computer Operating Systems</li>
+          </ul>
+          <li>Theory and Abstraction</li>
+          <ul>
+            <li>CSE 132A - Database System Principles</li>
+          </ul>
+          <li>Applications of Computing</li>
+          <ul>
+            <li>CSE 134B - Web Client Languages</li>
+            <li>CSE 150B - AI: Search and Reasoning</li>
+            <li>CSE 152A - Intro to Computer Vision</li>
+          </ul>
+        </ol>
+      </span>
+
+      <span id="contact-form">
+        <h3>Contact Me!</h3>
+        <form action="https://httpbin.org/post" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+"/>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required minlength="2" maxlength="50" pattern="[A-Za-z\s-]+"/>
+                <br /><br />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required/>
+                <br/>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{10,15}" title="Please enter a valid phone number (10-15 digits)."/>
+                <br/>
+
+                <label for="ident">Who are you?</label>
+                <select id="ident" name="ident" required>
+                    <optgroup label="School">
+                        <option value="Student">Student</option>
+                        <option value="Professor">Professor</option>
+                    </optgroup>
+                    <optgroup label="Industry">
+                        <option value="Recruiter">Recruiter</option>
+                        <option value="Engineer">Engineer</option>
+                    </optgroup>
+                    <option value="Other">Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Inquiry</legend>
+                <label for="inquiry">Your Message:</label>
+                <textarea id="inquiry" name="inquiry" required minlength="10" maxlength="500" pattern="[A-Za-z0-9.,!?\s]+"></textarea>
+            </fieldset>
+
+            <details>
+                <summary>Additional Details</summary>
+                <label for="contact-method">Preferred Method of Communication:</label>
+                <input list="methods" id="contact-method" name="contact-method"/>
+                <datalist id="methods">
+                    <option value="Email"></option>
+                    <option value="Phone"></option>
+                </datalist>
+            </details>
+
+            <input type="hidden" name="bot_trap" value="true">
+
+            <button type="submit">Submit!</button>
+        </form>
+      </span>
+    </main>
+    <br />
+    <footer>
+      If the form does not work, Brandon's email is
+      <address>brandonimai25@gmail.com</address>
+      <br />
+      If the iframe is not loading, press <kbd><code>Cmd + R</code></kbd> on Mac
+      or <kbd><code>Ctrl + R</code></kbd> on Windows to reload the page
+    </footer>
+  </body>
+</html>

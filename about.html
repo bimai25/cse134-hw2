@@ -7,11 +7,11 @@
   </head>
   <body>
     <nav>
-      <a href = "index.html">Home</a>
-      <a href = "about.html">About</a>
-      <a href = "projects.html">Projects</a>
-      <a href = "sports.html">Sports</a>
-  </nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="sports.html">Sports</a>
+    </nav>
 
     <main>
       <section id="resume">
@@ -42,19 +42,25 @@
 
       <span id="contact-form">
         <h3>Contact Me!</h3>
-        <form>
+        <form action="https://httpbin.org/post" method="POST">
           <fieldset>
             <legend>Personal Information</legend>
-            <label>First Name:</label>
-            <input type="text" />
-            <label>Last Name:</label>
-            <input type="text" /> <br /><br />
-            <label>Email:</label>
-            <input type="text" />
-            <label>Phone Number:</label>
-            <input type="text" />
-            <label>Who are you?</label>
-            <select>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required />
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required />
+            <br /><br />
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required /> <br />
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+            <br />
+
+            <label for="ident">Who are you?</label>
+            <select id="ident" name="ident" required>
               <optgroup label="School">
                 <option value="Student">Student</option>
                 <option value="Professor">Professor</option>
@@ -68,19 +74,25 @@
           </fieldset>
           <fieldset>
             <legend>Inquiry</legend>
-            <textarea></textarea>
+            <label for="inquiry"> Your Message:</label>
+            <textarea id="inquiry" name="inquiry" required></textarea>
           </fieldset>
 
           <details>
             <summary>Additional Details</summary>
-            <label>Preferred Method of Communication:</label>
-            <input list="methods" />
+            <label for="contact-mehod"
+              >Preferred Method of Communication:</label
+            >
+            <input list="methods" id="contact-method" name="contact-method" />
             <datalist id="methods">
               <option value="Email"></option>
               <option value="Phone"></option>
             </datalist>
           </details>
-          <button>Submit!</button>
+
+          <input type="hidden" name="bot_trap" value="true" />
+
+          <button type="submit">Submit!</button>
         </form>
       </span>
     </main>

@@ -74,7 +74,7 @@ label {
   color: var(--tertiary-color); /* Darker text for labels */
 }
 
-input[type="text"],
+input,
 select,
 textarea,
 input[list] {
@@ -103,6 +103,15 @@ button {
 
 button:hover {
   background-color: var(--alt-primary-color); /* Lighter hover color */
+}
+
+input:required:invalid, textarea:required:invalid
+select:required:invalid {
+  border-color: red;
+}
+input:required:valid, textarea:required:valid ,
+select:required:valid{
+  border-color: green;
 }
 
 details {
