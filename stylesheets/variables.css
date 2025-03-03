@@ -8,3 +8,14 @@
   --tertiary-color: #333333;
   --site-font: "Inter";
 }
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgb(20, 20, 20);
+    --primary-color: #5e7a92;
+    --alt-primary-color: #3a4b35;
+    --secondary-color: #c0c2c8;
+    --tertiary-color: #f0f0f0;
+  }
+}

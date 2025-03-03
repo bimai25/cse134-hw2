@@ -25,6 +25,17 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+button#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button#theme-toggle:hover{
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;

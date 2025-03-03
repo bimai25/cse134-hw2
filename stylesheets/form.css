@@ -1,0 +1,137 @@
+@import url("variables.css");
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color); /* Customize the border color */
+  outline: none; /* Remove the default outline */
+}
+
+fieldset {
+  border: 1px solid var(--secondary-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-color);
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+label {
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+  color: var(--tertiary-color); /* Darker text for labels */
+}
+
+input,
+select,
+textarea,
+input[list] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px; /* Set a fixed height for textarea */
+}
+
+form > button {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--alt-primary-color); /* Lighter hover color */
+}
+
+input:required:invalid,
+textarea:required:invalid select:required:invalid {
+  border-color: red;
+}
+
+/* input:required:valid,
+textarea:required:valid,
+select:required:valid {
+  border-color: green;
+} */
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+#char-count {
+  font-size: 0.75rem;
+}
+
+.warn {
+  border: 3px solid orange !important;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.error-message.show {
+  opacity: 1;
+}
+
+.error-flash {
+  border: 2px solid red !important;
+  animation: flash 0.3s alternate 3;
+}
+
+@keyframes flash {
+  0% {
+    background-color: #ffecec;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+details {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Flash effect */
+@keyframes flash-border {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: red;
+  }
+}

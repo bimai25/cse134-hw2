@@ -11,6 +11,8 @@
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="sports.html">Sports</a>
+
+      <button id="theme-toggle">🌙</button>
     </nav>
 
     <main>
@@ -46,17 +48,39 @@
           <fieldset>
             <legend>Personal Information</legend>
             <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" name="first-name" required />
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              required
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-z\- ]+"
+            />
 
             <label for="last-name">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" required />
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              required
+              minlength="2"
+              maxlength="50"
+              ppattern="[A-Za-z\- ]+"
+            />
             <br /><br />
 
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required /> <br />
+            <input type="email" id="email" name="email" required />
+            <br />
 
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              title="Please enter a valid phone number"
+            />
             <br />
 
             <label for="ident">Who are you?</label>
@@ -74,13 +98,21 @@
           </fieldset>
           <fieldset>
             <legend>Inquiry</legend>
-            <label for="inquiry"> Your Message:</label>
-            <textarea id="inquiry" name="inquiry" required></textarea>
+            <label for="inquiry">Your Message:</label>
+            <textarea
+              id="inquiry"
+              name="inquiry"
+              required
+              minlength="10"
+              maxlength="250"
+              pattern="[A-Za-z0-9.,!?\s]+"
+            ></textarea>
+            <div id = "char-count">250 characters remaining</div>
           </fieldset>
 
           <details>
             <summary>Additional Details</summary>
-            <label for="contact-mehod"
+            <label for="contact-method"
               >Preferred Method of Communication:</label
             >
             <input list="methods" id="contact-method" name="contact-method" />
@@ -91,6 +123,8 @@
           </details>
 
           <input type="hidden" name="bot_trap" value="true" />
+          <output name="errors"></output>
+          <output name="info"></output>
 
           <button type="submit">Submit!</button>
         </form>
@@ -104,5 +138,8 @@
       If the iframe is not loading, press <kbd><code>Cmd + R</code></kbd> on Mac
       or <kbd><code>Ctrl + R</code></kbd> on Windows to reload the page
     </footer>
+
+    <script src="scripts/forms.js"></script>
+    <script src="scripts/dark_light_mode.js"></script>
   </body>
 </html>
