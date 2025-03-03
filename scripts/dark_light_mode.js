@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         body.style.backgroundColor = 'rgb(20, 20, 20)';
         body.style.color = '#f0f0f0';
+
+        themeToggle.textContent = "☀️"; // Change to sun icon for light mode
     }
 
     function setLightMode() {
@@ -41,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         root.style.setProperty('--tertiary-color', '#333333');
 
         body.style.backgroundColor = 'rgb(255, 255, 255)';
-        body.style.color = '#333333'; 
+        body.style.color = '#333333';
+
+        themeToggle.textContent = "🌙"; // Change to moon icon for dark mode
     }
 });
