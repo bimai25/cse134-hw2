@@ -1,0 +1,95 @@
+@import url("variables.css");
+
+:root {
+    --card-bg: #ffffff;
+    --card-border: #ddd;
+    --card-radius: 12px;
+    --card-padding: 16px;
+    --card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --card-title: #333;
+    --card-text: #555;
+    --card-link: #007bff;
+    --card-link-hover: #0056b3;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #stadiums-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 1fr)); /* 4 columns */
+    gap: 1rem;
+  }
+  stadium-card {
+    display: block;
+    background: var(--bg-color, white);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    padding: var(--card-padding);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  stadium-card:hover {
+    transform: scale(1.02);
+  }
+
+  .stadium-title {
+    font-size: 1.25rem;
+    color: var(--card-title);
+    margin-bottom: 10px;
+  }
+
+  .stadium-desc {
+    font-size: 1rem;
+    color: var(--card-text);
+    margin-bottom: 12px;
+  }
+
+  .stadium-link {
+    color: var(--card-link);
+    text-decoration: none;
+  }
+
+  .stadium-link:hover {
+    color: var(--card-link-hover);
+  }
+
+  .stadium-team {
+    font-size: 0.85rem;
+    color: var(--card-text);
+  }
+
+  .stadium-date {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: var(--card-text);
+  }
+
+  .stadium-visits {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: var(--card-text);
+  }
+
+  @media (max-width: 1200px) {
+    #stadiums-container {
+      grid-template-columns: repeat(3, minmax(280px, 1fr)); /* 3 columns on medium screens */
+    }
+  }
+
+  @media (max-width: 900px) {
+    #stadiums-container {
+      grid-template-columns: repeat(2, minmax(280px, 1fr)); /* 2 columns on smaller screens */
+    }
+  }
+
+  @media (max-width: 600px) {
+    #stadiums-container {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+  }

@@ -1,0 +1,112 @@
+[
+    {
+      "title": "Angel Stadium",
+      "imgSrc": "https://img.mlbstatic.com/mlb-images/image/upload/t_5x2/t_w2208/mlb/zbb01l9tbxg83zchlvqp.jpg",
+      "imgAlt": "Angel Stadium of Anaheim",
+      "homeTeam": "Los Angeles Angels",
+      "description": "The home of my hometown team, Angel Stadium is the 4th oldest active stadium and as a very cozy feeling with plenty of parking.",
+      "link": "https://en.wikipedia.org/wiki/Angel_Stadium",
+      "date": "July 2012",
+      "visits": 16
+    },
+    {
+      "title": "Petco Park",
+      "imgSrc": "https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w2208/mlb/tvjy13vpfr9e08hmuz6k.jpg",
+      "imgAlt": "Petco Park",
+      "homeTeam": "San Diego Padres",
+      "description": "Nestled in the heart of downtown San Diego, Petco Park is a hub for fans of baseball and those who just want to have a nice drink in the park.",
+      "link": "https://en.wikipedia.org/wiki/Petco_Park",
+      "date": "May 27, 2022",
+      "visits": 4
+    },
+    {
+      "title": "Oracle Park",
+      "imgSrc": "https://blog.ticketmaster.com/wp-content/uploads/oracle-park.jpg",
+      "imgAlt": "Oracle Park",
+      "homeTeam": "San Franciso Giants",
+      "description": "Parked right on the San Franciso Bay in the famed McCovey Cove, Oracel Park is my personal favorite ballpark with stunning views and Gilroy Garlic Fries.",
+      "link": "https://en.wikipedia.org/wiki/Oracle_Park",
+      "date": "July 7, 2023",
+      "visits": 4
+    },
+    {
+      "title": "Werner Park",
+      "imgSrc": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/fivh80i9bmcty97ygekk",
+      "imgAlt": "Werner Park",
+      "homeTeam": "Omaha Storm Chasers",
+      "description": "My first ever minor league stadium visited, the Werner Park is a quaint stadium just outside Omaha that boast great views of the field for low, family-friendly prices.",
+      "link": "https://en.wikipedia.org/wiki/Werner_Park",
+      "date": "July 2, 2023",
+      "visits": 1
+    },
+    {
+      "title": "Kauffman Stadium",
+      "imgSrc": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/f0/e4/6c/fb-img-1464871145388.jpg?w=1200&h=-1&s=1",
+      "imgAlt": "Kauffman Stadium",
+      "homeTeam": "Kansas City Royals",
+      "description": "Right across the street from Arrowhead Stadium, Kauffman Stadium boasts a crown shaped scoreboard and water displays for every homerun. I was very hot when I visited.",
+      "link": "https://en.wikipedia.org/wiki/Kauffman_Stadium",
+      "date": "August 11, 2023",
+      "visits": 1
+    },
+    {
+      "title": "Citi Field",
+      "imgSrc": "https://www.ballparksofbaseball.com/wp-content/uploads/2016/03/citi17951.jpg",
+      "imgAlt": "Citi Field",
+      "homeTeam": "New York Mets",
+      "description": "Right across from the U.S Open Tennis Complex in Flushing, NY, Citi Field had the loudest and most passionate fans when I visited.",
+      "link": "https://en.wikipedia.org/wiki/Citi_Field",
+      "date": "September 3, 2024",
+      "visits": 1
+    },
+    {
+      "title": "Tokyo Dome",
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Tokyo_Dome_2015-5-12.JPG",
+      "imgAlt": "Tokyo Dome",
+      "homeTeam": "Yomiuri Giants",
+      "description": "A storied field in Japan, its roof is held up by a difference in air pressure resulting in a pop of ears and a huge gust of wind when exiting the stadium.",
+      "link": "https://en.wikipedia.org/wiki/Tokyo_Dome",
+      "date": "September 8, 2023",
+      "visits": 1
+    },
+    {
+      "title": "Dodger Stadium",
+      "imgSrc": "https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w2208/mlb/dwmezfgkagx3ahvzrh0c.jpg",
+      "imgAlt": "Dodger Stadium",
+      "homeTeam": "Los Angeles Dodgers",
+      "description": "Even though they are 2 of my least favorite teams in MLB, I went to Dodgers Stadium with the only goal to check off that I visited. I wore Giants gear when I went.",
+      "link": "https://en.wikipedia.org/wiki/Dodger_Stadium",
+      "date": "September 21, 2023",
+      "visits": 1
+    },
+    {
+      "title": "Oakland Coliseum",
+      "imgSrc": "https://i.guim.co.uk/img/media/76e819dd799079089ae6fae61184a611a227c87d/0_264_5860_3517/master/5860.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=64616131ae1f220e85f3e11e7d3bb652",
+      "imgAlt": "Oakland Coliseum",
+      "homeTeam": "Oakland Athletics",
+      "description": "Easily the worst park I visited, I only went to say that I gone as the Athletics have since re-located to Sacramento in preparation for a permanent move to Las Vegas.",
+      "link": "https://en.wikipedia.org/wiki/T-Mobile_Park",
+      "date": "July 20, 2024",
+      "visits": 1
+    },
+    {
+      "title": "T-Mobile Park",
+      "imgSrc": "https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w2208/mlb/sswtdqkyqp0fxacialff.jpg",
+      "imgAlt": "T-Mobile Park",
+      "homeTeam": "Seattle Mariners",
+      "description": "The only park I have visited with the retractable roof, T-Mobile Park had the best in-stadium food options as I had a katsu curry in my seat.",
+      "link": "https://en.wikipedia.org/wiki/T-Mobile_Park",
+      "date": "August 4, 2024",
+      "visits": 1
+    },
+    {
+      "title": "Fenway Park",
+      "imgSrc": "https://www.baseball-almanac.com/stadium/images/Fenway_Park_1.jpg",
+      "imgAlt": "Fenway Park",
+      "homeTeam": "Boston Red Sox",
+      "description": "The coolest ballpark I went to, the highlight of the day was singing Sweet Caroline during the 7th inning stretch. The Red Sox somehow lost to the 2024 White Sox that day.",
+      "link": "https://en.wikipedia.org/wiki/Fenway_Park",
+      "date": "September 8, 2024",
+      "visits": 1
+    }
+  ]
