@@ -1,10 +1,10 @@
 class stadiumCard extends HTMLElement {
-    constructor() {
+  constructor() {
       super();
       this.attachShadow({ mode: 'open' });
-    }
+  }
 
-    connectedCallback() {
+  connectedCallback() {
       const title = this.getAttribute('title');
       const imgSrc = this.getAttribute('img-src');
       const imgAlt = this.getAttribute('img-alt');
@@ -15,53 +15,63 @@ class stadiumCard extends HTMLElement {
       const team = this.getAttribute('homeTeam');
 
       this.shadowRoot.innerHTML = `
-        <style>
-          @import url('style.css');
-        </style>
-        <h2 class="stadium-title">${title}</h2>
-        <picture>
-          <img src="${imgSrc}" alt="${imgAlt}" width="100%" height="175" style="object-fit: cover; border-radius: 0.5rem; margin-bottom: 0.25rem;">
-        </picture>
-        <p class = "stadium-team"><strong>Home Team:</strong> ${team}</p>
-        <p class="stadium-desc">${description}</p>
-        <a href="${link}" class="stadium-link" target="_blank">Read More</a>
-        <p class="stadium-date"><strong>First Visit:</strong> ${date}</p>
-        <p class = "stadium-visit"><strong>Total Visits:</strong> ${visits}</p>
+          <style>
+              @import url('style.css');
+          </style>
+          <h2 class="stadium-title">${title}</h2>
+          <picture>
+              <img src="${imgSrc}" alt="${imgAlt}" width="100%" height="175" style="object-fit: cover; border-radius: 0.5rem; margin-bottom: 0.25rem;">
+          </picture>
+          <p class="stadium-team"><strong>Home Team:</strong> ${team}</p>
+          <p class="stadium-desc">${description}</p>
+          <a href="${link}" class="stadium-link" target="_blank">Read More</a>
+          <p class="stadium-date"><strong>First Visit:</strong> ${date}</p>
+          <p class="stadium-visit"><strong>Total Visits:</strong> ${visits}</p>
       `;
-    }
   }
-//   const sampleLocalstadiums = [
-//     {
-//       title: "Task Manager App",
-//       imgSrc: "https://via.placeholder.com/400x200",
-//       imgAlt: "Task manager screenshot",
-//       description: "A task management tool built with React.",
-//       link: "https://github.com/username/task-manager",
-//       tags: ["React", "Productivity"],
-//       date: "2023-10-05"
-//     }
-//   ];
-//   localStorage.setItem('stadiums', JSON.stringify(sampleLocalstadiums));
-  customElements.define('stadium-card', stadiumCard);
+}
 
-  // ---------- Dynamically Create Cards ----------
+customElements.define('stadium-card', stadiumCard);
 
-  // Load from Local Storage
-  const localstadiums = JSON.parse(localStorage.getItem('stadiums')) || [];
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    localStorage.setItem('stadiums', JSON.stringify(data));
+    console.log('Stadium data has been saved to localStorage!');
+  })
+  .catch(error => console.error('Failed to load JSON:', error));
 
-  // Load from JSON file (remote simulation)
-  fetch('data.json')
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+document.getElementById('load-local').addEventListener('click', async () => {
+  const localStadiums = JSON.parse(localStorage.getItem('stadiums')) || [];
+  clearStadiums();
+  await delay(500);
+  displayStadiums(localStadiums);
+});
+
+document.getElementById('load-remote').addEventListener('click', () => {
+  fetch('https://api.jsonbin.io/v3/b/67d33d068561e97a50eb68a6/latest', {
+    headers: {
+      'X-Master-Key': '$2a$10$4oBLd/upsQNvKaZKCDGm4eiGSPfi8OTUJXWqAD4lQWIjQzznWksBy'
+    }
+  })
     .then(response => response.json())
-    .then(remotestadiums => {
-      const allstadiums = [...localstadiums, ...remotestadiums];
-      displaystadiums(allstadiums);
+    .then(async data => {
+      const remoteStadiums = data.record;
+      clearStadiums();
+      await delay(500);
+      displayStadiums(remoteStadiums);
     })
-    .catch(error => console.error('Failed to load JSON:', error));
+    .catch(error => console.error('Failed to load remote JSON:', error));
+});
 
-  // Function to append cards
-  function displaystadiums(stadiums) {
-    const container = document.getElementById('stadiums-container');
-    stadiums.forEach(stadium => {
+
+function displayStadiums(stadiums) {
+  const container = document.getElementById('stadiums-container');
+  stadiums.forEach(stadium => {
       const card = document.createElement('stadium-card');
       card.setAttribute('title', stadium.title);
       card.setAttribute('img-src', stadium.imgSrc);
@@ -70,7 +80,12 @@ class stadiumCard extends HTMLElement {
       card.setAttribute('link', stadium.link);
       card.setAttribute('date', stadium.date);
       card.setAttribute('homeTeam', stadium.homeTeam);
-      card.setAttribute('visits', stadium.visits)
+      card.setAttribute('visits', stadium.visits);
       container.appendChild(card);
-    });
-  }
+  });
+}
+
+function clearStadiums() {
+  const container = document.getElementById('stadiums-container');
+  container.innerHTML = '';
+}
