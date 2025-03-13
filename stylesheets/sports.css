@@ -148,7 +148,7 @@ figure bowling-card:hover {
   background-color: var(--primary-color);
 }
 
-button {
+section > button {
   margin-top: 0.5rem;
   padding: 0.5rem;
   background-color: var(--primary-color);
